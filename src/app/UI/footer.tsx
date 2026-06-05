@@ -43,10 +43,10 @@ export function Footer() {
     <footer className="bg-background border-t border-border/50 py-6 relative overflow-hidden text-foreground">
       {/* Decorative Background */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-red-600/5 to-transparent -z-10" />
-      
+
       <div className="mx-auto w-[90%] max-w-7xl">
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16 py-4">
-          
+
           {/* Brand & Mission */}
           <div className="col-span-2 md:col-span-1 lg:col-span-4 space-y-8">
             <Link href="/" className="group flex items-center gap-2 relative h-16 md:h-20 w-56 md:w-80">
@@ -81,7 +81,7 @@ export function Footer() {
             <ul className="space-y-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-red-600 transition-colors font-bold text-sm flex items-center group"
                   >
@@ -115,23 +115,54 @@ export function Footer() {
 
           {/* Contact Details */}
           <div className="col-span-2 md:col-span-1 lg:col-span-3 space-y-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-red-600">Connect</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-red-600">
+              Connect
+            </h4>
+
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+
+              {/* Address */}
+              <a
+                href="https://maps.google.com/?q=Villa+No+178+Chitrapuri+Row+House+Road+Chitrapuri+Colony+Hyderabad+TS+500104"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
                 <MapPin className="w-5 h-5 text-red-600 shrink-0 mt-1" />
-                <p className="text-muted-foreground font-bold text-sm leading-relaxed">
-                  Villa No : 178, Chitrapuri Row House Rd,<br />
-                  Chitrapuri Colony, Hyderabad, TS 500104
+
+                <p className="text-muted-foreground font-bold text-sm leading-relaxed transition-colors group-hover:text-red-600">
+                  Villa No : 178, Chitrapuri Row House Rd,
+                  <br />
+                  Chitrapuri Colony,
+                  <br />
+                  Hyderabad, TS 500104
                 </p>
-              </div>
-              <div className="flex items-center gap-4">
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:+917036777677"
+                className="flex items-center gap-4 group"
+              >
                 <Phone className="w-5 h-5 text-red-600 shrink-0" />
-                <p className="text-muted-foreground font-bold text-sm">+91 70367 77677</p>
-              </div>
-              <div className="flex items-center gap-4">
+
+                <p className="text-muted-foreground font-bold text-sm transition-colors group-hover:text-red-600">
+                  +91 70367 77677
+                </p>
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:info@avanflix.com"
+                className="flex items-center gap-4 group"
+              >
                 <Mail className="w-5 h-5 text-red-600 shrink-0" />
-                <p className="text-muted-foreground font-bold text-sm">info@avanflix.com</p>
-              </div>
+
+                <p className="text-muted-foreground font-bold text-sm transition-colors group-hover:text-red-600">
+                  info@avanflix.com
+                </p>
+              </a>
+
             </div>
           </div>
         </div>
@@ -151,7 +182,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          
+
           <button
             onClick={scrollToTop}
             className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] hover:text-red-600 transition-colors"

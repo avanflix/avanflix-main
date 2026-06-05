@@ -40,10 +40,6 @@ export function Brands() {
         </div>
 
         <div className="relative space-y-12">
-          {/* Fading Edges Overlay */}
-          <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
-
           {/* First Marquee */}
           <div className="flex animate-marquee whitespace-nowrap gap-16 items-center">
             {[...logos1, ...logos1, ...logos1].map((brand, i) => (
