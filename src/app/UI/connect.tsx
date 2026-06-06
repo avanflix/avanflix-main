@@ -159,7 +159,7 @@ export function Connect() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {[
             { icon: Phone, label: "Direct Line", value: "+91 70367 77677" },
-            { icon: Mail, label: "Email Strategy", value: "reaches@avanflix.com" },
+            { icon: Mail, label: "Email Strategy", value: "reachus@avanflix.com" },
             { icon: MapPin, label: "HQ Location", value: "Hyderabad, TS 500104" },
           ].map((item, i) => (
             <motion.div 

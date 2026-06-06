@@ -153,13 +153,13 @@ export function Footer() {
 
               {/* Email */}
               <a
-                href="mailto:reaches@avanflix.com"
+                href="mailto:reachus@avanflix.com"
                 className="flex items-center gap-4 group"
               >
                 <Mail className="w-5 h-5 text-red-600 shrink-0" />
 
                 <p className="text-muted-foreground font-bold text-sm transition-colors group-hover:text-red-600">
-                  reaches@avanflix.com
+                  reachus@avanflix.com
                 </p>
               </a>
 
