@@ -8,45 +8,39 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "Marketing Director @ TechCorp",
-    testimonial: "AFX Digital transformed our digital marketing strategy. Their creative approach and attention to detail helped us reach new audiences and increase engagement across all platforms.",
-    initials: "SJ"
+    name: "Mutyala Uma Mahesh",
+    testimonial: "Avanflix digital marketing stands out with a young and innovative team dedicated to creating unique identities through conceptual designs. Their passion for branding and commitment to creativity drives them to deliver growth-oriented results.",
+    initials: "MU"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "VP of Growth @ Global Events Inc.",
-    testimonial: "The team at AFX Digital delivered an exceptional experience for our annual conference. From planning to execution, they handled every detail with professionalism and creativity.",
-    initials: "MC"
+    name: "Swapne Kota",
+    testimonial: "AvanFlix is a digital marketing company that helps businesses improve their online presence. Their goal is to boost visibility, engage audiences, and drive growth through strategic digital marketing. I am very Fascinated about the work done by the AvanFlix.",
+    initials: "SK"
   },
   {
     id: 3,
-    name: "Priya Patel",
-    position: "CEO @ Fashion Forward",
-    testimonial: "The photography and videography services provided by AFX Digital exceeded our expectations. They captured the essence of our brand and delivered stunning visuals.",
-    initials: "PP"
+    name: "Shyam Teja",
+    testimonial: "A New Era of Marketing Content Creation evolves you to the Best ever approaches by Avanflix Digital Marketing for the Genuine Requiem of Productivity Services. Absolutely deserves an Ensured Recommendation.",
+    initials: "ST"
   },
   {
     id: 4,
-    name: "David Rodriguez",
-    position: "Founder @ University Innovation",
-    testimonial: "AFX Digital helped us organize our flagship festival with limited budget. Their expertise in event management made it a record-breaking success.",
-    initials: "DR"
+    name: "Nishant S",
+    testimonial: "A game-changer for our startup! Their digital marketing expertise helped us gain traction and reach the right audience. Amazing team!",
+    initials: "NS"
   },
   {
     id: 5,
     name: "Alex Thompson",
-    position: "Creative Lead @ Digital Solutions",
     testimonial: "Working with AFX Digital was a game-changer. Their innovative solutions and dedication to excellence helped us achieve results beyond our wildest expectations.",
     initials: "AT"
   },
   {
     id: 6,
-    name: "Elena Rossi",
-    position: "Brand Manager @ Luxury Goods",
-    testimonial: "The most professional agency we have ever worked with. Their ability to translate complex brand values into simple, beautiful visuals is unmatched.",
-    initials: "ER"
+    name: "RADHIKA KUMARI MITTAL",
+    testimonial: "Absolutely amazing! The photos and videos felt so real and full of life, capturing every moment just the way we remembered. The quality, the emotions, and the little details—they got it all so perfectly! Truly beyond what we expected! 😊📸✨",
+    initials: "RM"
   }
 ];
 
@@ -129,9 +123,7 @@ export function Testimonials() {
                   </Avatar>
                   <div>
                     <h4 className="font-bold text-foreground leading-none text-base">{item.name}</h4>
-                    <p className="text-[10px] font-bold text-red-600 uppercase tracking-widest mt-1">
-                      {item.position}
-                    </p>
+
                   </div>
                 </div>
               </div>

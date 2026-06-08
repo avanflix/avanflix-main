@@ -22,24 +22,50 @@ export function Connect() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Strategy session booked! We'll reach out shortly.");
+
+        setFormData({
+          brandName: "",
+          phoneNumber: "",
+          email: "",
+          location: "",
+        });
+      } else {
+        alert("Failed to send request.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    } finally {
       setIsSubmitting(false);
-      alert("Strategy session booked! We'll reach out shortly.");
-      setFormData({ brandName: "", phoneNumber: "", email: "", location: "" });
-    }, 1500);
+    }
   };
 
   return (
     <section id="connect" className="py-12 bg-background relative overflow-x-hidden text-foreground flex flex-col justify-center w-full">
       {/* Background Decor - Changed to prevent right-side overflow */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-red-600/5 rounded-full blur-[120px] -z-10 translate-x-1/4 -translate-y-1/2 pointer-events-none" />
-      
+
       <div className="mx-auto w-full max-w-7xl relative z-10 px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center mb-20">
-          
+
           {/* Info Side */}
           <div className="lg:col-span-5 space-y-12">
             <motion.div
@@ -61,7 +87,7 @@ export function Connect() {
           </div>
 
           {/* Form Side */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -73,12 +99,12 @@ export function Connect() {
               <div className="absolute top-0 right-0 p-8 opacity-[0.05] pointer-events-none">
                 <Send className="w-32 h-32 md:w-48 md:h-48 -rotate-12 text-red-600" />
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-8 relative z-10 w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
                   <div className="space-y-2">
                     <Label htmlFor="brandName" className="text-[10px] font-black uppercase tracking-[0.2em] ml-1 text-red-600">Brand Name</Label>
-                    <Input 
+                    <Input
                       id="brandName"
                       name="brandName"
                       value={formData.brandName}
@@ -90,7 +116,7 @@ export function Connect() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-[10px] font-black uppercase tracking-[0.2em] ml-1 text-red-600">Work Email</Label>
-                    <Input 
+                    <Input
                       id="email"
                       type="email"
                       name="email"
@@ -106,7 +132,7 @@ export function Connect() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
                   <div className="space-y-2">
                     <Label htmlFor="phoneNumber" className="text-[10px] font-black uppercase tracking-[0.2em] ml-1 text-red-600">Phone Number</Label>
-                    <Input 
+                    <Input
                       id="phoneNumber"
                       name="phoneNumber"
                       value={formData.phoneNumber}
@@ -118,7 +144,7 @@ export function Connect() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="location" className="text-[10px] font-black uppercase tracking-[0.2em] ml-1 text-red-600">Location</Label>
-                    <Input 
+                    <Input
                       id="location"
                       name="location"
                       value={formData.location}
@@ -130,8 +156,8 @@ export function Connect() {
                   </div>
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full py-8 rounded-[1.5rem] text-lg font-black shadow-2xl shadow-red-600/20 group relative overflow-hidden bg-red-600 hover:bg-red-700 text-white border-none"
                 >
@@ -139,14 +165,14 @@ export function Connect() {
                     {isSubmitting ? "Initiating Session..." : "Secure Your Strategy Session"}
                     {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />}
                   </span>
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-white/20"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: "100%" }}
                     transition={{ duration: 0.6 }}
                   />
                 </Button>
-                
+
                 <p className="text-center text-[10px] text-muted-foreground font-black uppercase tracking-widest px-4">
                   By clicking, you agree to our high-performance standards.
                 </p>
@@ -162,7 +188,7 @@ export function Connect() {
             { icon: Mail, label: "Email Strategy", value: "reachus@avanflix.com" },
             { icon: MapPin, label: "HQ Location", value: "Hyderabad, TS 500104" },
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
