@@ -26,10 +26,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", href: "https://instagram.com", icon: <Instagram className="h-5 w-5" /> },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: <Linkedin className="h-5 w-5" /> },
-  { name: "YouTube", href: "https://youtube.com", icon: <Youtube className="h-5 w-5" /> },
-  { name: "Twitter", href: "https://twitter.com", icon: <Twitter className="h-5 w-5" /> },
+  { name: "Instagram", href: "https://www.instagram.com/avanflix/?hl=en", icon: <Instagram className="h-5 w-5" /> },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/avanflix/posts/?feedView=all", icon: <Linkedin className="h-5 w-5" /> },
+  { name: "YouTube", href: "https://www.youtube.com/@avanflix", icon: <Youtube className="h-5 w-5" /> },
+  // { name: "Twitter", href: "https://twitter.com", icon: <Twitter className="h-5 w-5" /> },
 ];
 
 export function Footer() {

@@ -75,7 +75,7 @@ export function Connect() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9]">
+              <h2 className="text-2xl md:text-4xl lg:text-7xl font-black tracking-tighter leading-[0.9]">
                 Ready to <br />
                 <span className="text-red-600 italic">Scale</span> Your <br />
                 Brand?
@@ -184,12 +184,30 @@ export function Connect() {
         {/* Contact Details Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {[
-            { icon: Phone, label: "Direct Line", value: "+91 70367 77677" },
-            { icon: Mail, label: "Email Strategy", value: "reachus@avanflix.com" },
-            { icon: MapPin, label: "HQ Location", value: "Hyderabad, TS 500104" },
+            {
+              icon: Phone,
+              label: "Direct Line",
+              value: "+91 70367 77677",
+              href: "tel:+917036777677",
+            },
+            {
+              icon: Mail,
+              label: "Email Strategy",
+              value: "reachus@avanflix.com",
+              href: "mailto:reachus@avanflix.com",
+            },
+            {
+              icon: MapPin,
+              label: "HQ Location",
+              value: "Hyderabad, TS 500104",
+              href: "https://maps.app.goo.gl/jT7RE7MYDxaJmQ968",
+            },
           ].map((item, i) => (
-            <motion.div
+            <motion.a
               key={i}
+              href={item.href}
+              target={item.label === "HQ Location" ? "_blank" : undefined}
+              rel={item.label === "HQ Location" ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -199,11 +217,16 @@ export function Connect() {
               <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center group-hover:bg-red-600 transition-all duration-500 shadow-sm group-hover:shadow-lg group-hover:shadow-red-600/20 shrink-0">
                 <item.icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
               </div>
+
               <div className="overflow-hidden">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-1">{item.label}</p>
-                <p className="text-lg md:text-xl font-black tracking-tight truncate">{item.value}</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-1">
+                  {item.label}
+                </p>
+                <p className="text-lg md:text-xl font-black tracking-tight truncate">
+                  {item.value}
+                </p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
