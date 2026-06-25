@@ -5,19 +5,11 @@ import { Play } from "lucide-react";
 
 const videos = [
     "https://pub-960024d73c05488896944e01057e8018.r2.dev/avanflix.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/f&f.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/bb.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/eleve.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/chiguru.mp4",
+    "https://pub-960024d73c05488896944e01057e8018.r2.dev/blissbilva.mp4",
+    "https://pub-960024d73c05488896944e01057e8018.r2.dev/vaibhavam.mov",
     "https://pub-960024d73c05488896944e01057e8018.r2.dev/eleve1.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/dermadock.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/eleve2.mp4",
+    "https://pub-960024d73c05488896944e01057e8018.r2.dev/AFXframes.mp4",
     "https://pub-960024d73c05488896944e01057e8018.r2.dev/f&f1.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/eleve3.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/jamjunxion.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/yajur.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/eleve4.mp4",
-    "https://pub-960024d73c05488896944e01057e8018.r2.dev/f&f2.mp4",
 ];
 
 const duplicatedVideos = [...videos, ...videos];

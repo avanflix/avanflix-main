@@ -77,7 +77,7 @@ export function Hero() {
               transition={{ duration: 1, ease: "easeOut" }}
               className="flex flex-col items-center"
             >
-              <div className="relative w-48 h-20 flex items-center justify-center shadow-2xl shadow-primary/20">
+              <div className="relative w-48 h-20 flex items-center justify-center ">
                 <Image 
                   src="/logo.png" 
                   alt="AFX Digital Loader" 

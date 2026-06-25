@@ -32,15 +32,15 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Alex Thompson",
-    testimonial: "Working with AFX Digital was a game-changer. Their innovative solutions and dedication to excellence helped us achieve results beyond our wildest expectations.",
-    initials: "AT"
+    name: "Radhika mittal",
+    testimonial: "Phenomenal results! From SEO to social media, every strategy was on point. Our website traffic and sales have doubled in just a few months!",
+    initials: "RM"
   },
   {
     id: 6,
-    name: "RADHIKA KUMARI MITTAL",
-    testimonial: "Absolutely amazing! The photos and videos felt so real and full of life, capturing every moment just the way we remembered. The quality, the emotions, and the little details—they got it all so perfectly! Truly beyond what we expected! 😊📸✨",
-    initials: "RM"
+    name: "Jash",
+    testimonial: "I feel like I have chosen the perfect place for digital marketing services",
+    initials: "JS"
   }
 ];
 
