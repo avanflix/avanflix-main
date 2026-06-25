@@ -45,10 +45,10 @@ export function Footer() {
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-red-600/5 to-transparent -z-10" />
 
       <div className="mx-auto w-[90%] max-w-7xl">
-        <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 py-4">
 
           {/* Brand & Mission */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-4 space-y-8">
+          <div className="space-y-8">
             <Link href="/" className="group flex items-center gap-2 relative h-16 md:h-20 w-56 md:w-80">
               <Image
                 src="/logo.png"
@@ -76,7 +76,7 @@ export function Footer() {
           </div>
 
           {/* Quick Navigation */}
-          <div className="col-span-1 lg:col-span-2 space-y-8">
+          <div className="space-y-8 md:justify-self-center">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-red-600">Explore</h4>
             <ul className="space-y-4">
               {navLinks.map((link) => (
@@ -86,7 +86,7 @@ export function Footer() {
                     className="text-muted-foreground hover:text-red-600 transition-colors font-bold text-sm flex items-center group"
                   >
                     {link.name}
-                    <ArrowRight className="w-3 h-3 ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    {/* <ArrowRight className="w-3 h-3 ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /> */}
                   </Link>
                 </li>
               ))}
@@ -94,7 +94,7 @@ export function Footer() {
           </div>
 
           {/* Solutions */}
-          <div className="col-span-1 lg:col-span-3 space-y-8">
+          <div className="space-y-8 md:justify-self-end">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-red-600">Solutions</h4>
             <ul className="space-y-4">
               {[
@@ -113,33 +113,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* Contact Details
           <div className="col-span-2 md:col-span-1 lg:col-span-3 space-y-8">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-red-600">
-              Connect
+              Global Presence
             </h4>
 
             <div className="space-y-6">
 
-              {/* Address */}
-              <a
-                href="https://maps.google.com/?q=Villa+No+178+Chitrapuri+Row+House+Road+Chitrapuri+Colony+Hyderabad+TS+500104"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-4 group"
-              >
+              <div className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-red-600 shrink-0 mt-1" />
 
-                <p className="text-muted-foreground font-bold text-sm leading-relaxed transition-colors group-hover:text-red-600">
-                  Villa No : 178, Chitrapuri Row House Rd,
-                  <br />
-                  Chitrapuri Colony,
-                  <br />
-                  Hyderabad, TS 500104
-                </p>
-              </a>
+                <div className="space-y-2">
+                  <p className="text-muted-foreground font-bold text-sm">
+                    🇮🇳 India
+                  </p>
+                  <p className="text-muted-foreground font-bold text-sm">
+                    🇦🇪 Dubai
+                  </p>
+                  <p className="text-muted-foreground font-bold text-sm">
+                    🇺🇸 USA
+                  </p>
+                </div>
+              </div>
 
-              {/* Phone */}
               <a
                 href="tel:+917036777677"
                 className="flex items-center gap-4 group"
@@ -149,9 +146,9 @@ export function Footer() {
                 <p className="text-muted-foreground font-bold text-sm transition-colors group-hover:text-red-600">
                   +91 70367 77677
                 </p>
+                <ArrowRight className="w-3 h-3 ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </a>
 
-              {/* Email */}
               <a
                 href="mailto:reachus@avanflix.com"
                 className="flex items-center gap-4 group"
@@ -164,7 +161,7 @@ export function Footer() {
               </a>
 
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

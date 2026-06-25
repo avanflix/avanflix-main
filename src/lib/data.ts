@@ -87,7 +87,7 @@ export const services = [
         id: 4,
         title: "Event Management",
         description: "We deliver comprehensive event planning and execution designed to create high-impact experiences from concept and production to flawless on-ground delivery.",
-        image: "https://images.unsplash.com/photo-1511578314322-379afb476865",
+        image: "/images/event.png",
         featuresTitle: "Includes:",
         features: [
             "Corporate Events",
@@ -115,7 +115,7 @@ export const services = [
         id: 5,
         title: "Portfolio Shoots",
         description: "Professionally curated portfolio sessions for models and entrepreneurs designed to enhance personal branding, professional growth, and digital presence across industries.",
-        image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94",
+        image: "/images/photography.jpg",
         featuresTitle: "Perfect for:",
         features: [
             "Models & Creators",

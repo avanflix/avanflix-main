@@ -182,52 +182,103 @@ export function Connect() {
         </div>
 
         {/* Contact Details Row */}
+        {/* Contact Details Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-          {[
-            {
-              icon: Phone,
-              label: "Direct Line",
-              value: "+91 70367 77677",
-              href: "tel:+917036777677",
-            },
-            {
-              icon: Mail,
-              label: "Email Strategy",
-              value: "reachus@avanflix.com",
-              href: "mailto:reachus@avanflix.com",
-            },
-            {
-              icon: MapPin,
-              label: "HQ Location",
-              value: "Hyderabad, TS 500104",
-              href: "https://maps.app.goo.gl/jT7RE7MYDxaJmQ968",
-            },
-          ].map((item, i) => (
-            <motion.a
-              key={i}
-              href={item.href}
-              target={item.label === "HQ Location" ? "_blank" : undefined}
-              rel={item.label === "HQ Location" ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 + i * 0.1 }}
-              className="flex items-center gap-6 group cursor-pointer w-full"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center group-hover:bg-red-600 transition-all duration-500 shadow-sm group-hover:shadow-lg group-hover:shadow-red-600/20 shrink-0">
-                <item.icon className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
-              </div>
 
-              <div className="overflow-hidden">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-1">
-                  {item.label}
-                </p>
-                <p className="text-lg md:text-xl font-black tracking-tight truncate">
-                  {item.value}
-                </p>
+          {/* Phone */}
+          <motion.a
+            href="tel:+917036777677"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center gap-6 group w-full"
+          >
+            <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center group-hover:bg-red-600 transition-all duration-500">
+              <Phone className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
+            </div>
+
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-1">
+                Direct Line
+              </p>
+              <p className="text-lg md:text-xl font-black tracking-tight">
+                +91 70367 77677
+              </p>
+            </div>
+          </motion.a>
+
+          {/* Email */}
+          <motion.a
+            href="mailto:reachus@avanflix.com"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex items-center gap-6 group w-full"
+          >
+            <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center group-hover:bg-red-600 transition-all duration-500">
+              <Mail className="w-6 h-6 text-red-600 group-hover:text-white transition-colors" />
+            </div>
+
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-1">
+                Email Strategy
+              </p>
+              <p className="text-lg md:text-xl font-black tracking-tight">
+                reachus@avanflix.com
+              </p>
+            </div>
+          </motion.a>
+
+          {/* Branches */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="flex items-start gap-6 w-full"
+          >
+            <div className="w-14 h-14 rounded-2xl bg-red-600/10 flex items-center justify-center shrink-0">
+              <MapPin className="w-6 h-6 text-red-600" />
+            </div>
+
+            <div className="flex-1">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3">
+                Our Branches
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://maps.app.goo.gl/jT7RE7MYDxaJmQ968"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 rounded-full border border-border text-sm font-semibold hover:border-red-600 hover:text-red-600 transition-all"
+                >
+                  Hyderabad
+                </a>
+
+                {/* <a
+                  href="https://maps.google.com/?q=Vijayawada"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 rounded-full border border-border text-sm font-semibold hover:border-red-600 hover:text-red-600 transition-all"
+                >
+                  Vijayawada
+                </a> */}
+
+                <a
+                  href="https://maps.google.com/?q=Dubai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 rounded-full border border-border text-sm font-semibold hover:border-red-600 hover:text-red-600 transition-all"
+                >
+                  Dubai
+                </a>
               </div>
-            </motion.a>
-          ))}
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
