@@ -12,13 +12,13 @@ const navLinks = [
   { name: "Home", href: "/#home" },
   { name: "Services", href: "/#services" },
   // { name: "Process", href: "/#process" },
-  { name: "Work", href: "/#work" },
+  { name: "Work", href: "/#showcase" },
   { name: "Why Us", href: "/#why-us" },
   { name: "Testimonials", href: "/#testimonials" },
   { name: "Blogs", href: "/blogs" },
   { name: "Events", href: "/events" },
 ];
-
+  
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();

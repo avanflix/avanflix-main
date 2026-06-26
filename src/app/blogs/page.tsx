@@ -13,67 +13,85 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+
 const blogs = [
-    {
-        id: 1,
-        title: "The Future of Digital Marketing in 2025",
-        description: "Explore the emerging trends that will shape the digital marketing landscape, from AI-driven personalization to immersive experiences.",
-        content: "As we approach 2025, digital marketing is undergoing a seismic shift. Artificial Intelligence is no longer a buzzword but a fundamental component of strategy, enabling hyper-personalization at scale. Voice search optimization, immersive augmented reality experiences, and sustainability-focused branding are becoming key differentiators. Brands that adapt to these changes will thrive, while those that stick to traditional methods may find themselves left behind.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-        date: "April 12, 2024",
-        author: "Strategy Team",
-        readTime: "6 min read"
-    },
-    {
-        id: 2,
-        title: "Creating Content That Resonates",
-        description: "Learn the secrets behind crafting content that connects deeply with your audience and drives meaningful engagement.",
-        content: "In an era of information overload, content that resonates is content that adds value. It's not just about selling a product; it's about telling a story that interacts with the audience's emotions and needs. Authenticity, consistency, and a clear brand voice are the pillars of successful content strategy. Understanding your audience's pain points and aspirations allows you to create content that serves them, fostering loyalty and trust.",
-        image: "https://images.unsplash.com/photo-1598899134739-9609cdefdb20",
-        date: "March 28, 2024",
-        author: "Creative Team",
-        readTime: "4 min read"
-    },
-    {
-        id: 3,
-        title: "Event Management: Beyond Logistics",
-        description: "Discover how to transform events into unforgettable experiences that leave a lasting impact on attendees.",
-        content: "Successful event management goes far beyond logistics and checklists. It's about engineering experiences. From the moment an attendee receives an invitation to the post-event follow-up, every touchpoint matters. Creating immersive environments, facilitating networking opportunities, and delivering seamless execution are what turn a standard corporate gathering into a memorable event that strengthens brand equity.",
-        image: "https://images.unsplash.com/photo-1511578314322-379afb476865",
-        date: "March 15, 2024",
-        author: "Events Hub",
-        readTime: "8 min read"
-    },
-    {
-        id: 4,
-        title: "Building a Personal Brand",
-        description: "Strategies for entrepreneurs and creators to build a strong, authentic personal brand that stands out.",
-        content: "Your personal brand is your reputation in the digital age. It's what people say about you when you're not in the room. Building a strong personal brand requires a mix of strategic visibility, thought leadership, and networking. Consistency across platforms, sharing your unique journey, and engaging with your community are essential steps to establishing authority and trust in your niche.",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-        date: "Feb 22, 2024",
-        author: "PR Expert",
-        readTime: "5 min read"
-    },
-    {
-        id: 5,
-        title: "Video Marketing Essentials",
-        description: "Why video is king in modern marketing and how you can leverage it to grow your business.",
-        content: "Video content has the highest engagement rates across all social platforms. It conveys information quickly, builds emotional connections, and boosts SEO. Whether it's short-form videos for TikTok and Reels or long-form educational content for YouTube, incorporating video into your marketing mix is non-negotiable for brands looking to capture attention in a crowded marketplace.",
-        image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4",
-        date: "Jan 18, 2024",
-        author: "Production Team",
-        readTime: "7 min read"
-    },
-    {
-        id: 6,
-        title: "The Power of Influencer Marketing",
-        description: "How to effectively collaborate with influencers to reach new audiences and build credibility.",
-        content: "Influencer marketing has evolved from simple product placements to deep, strategic partnerships. Micro-influencers with highly engaged, niche audiences often offer better ROI than mega-celebrities. The key is to find influencers whose values align with your brand. Authentic collaborations where the influencer has creative freedom tend to perform best, feeling less like ads and more like genuine recommendations.",
-        image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04",
-        date: "Jan 05, 2024",
-        author: "Social Team",
-        readTime: "6 min read"
-    },
+  {
+    id: 1,
+    title: "The Future of Digital Marketing",
+    description:
+      "Explore the emerging trends shaping digital marketing, from AI-powered personalization to automation, predictive analytics, and immersive customer experiences.",
+    content:
+      "Digital marketing is evolving at an unprecedented pace. Artificial Intelligence, machine learning, and automation are enabling businesses to deliver personalized experiences at scale. Search behavior is shifting toward voice and visual search, while first-party data is becoming more valuable in a privacy-first world. Brands that embrace AI-powered content creation, predictive analytics, omnichannel marketing, and immersive technologies like AR and VR will gain a competitive edge. Success in 2025 will depend on agility, data-driven decision-making, and creating authentic customer experiences that build trust and long-term loyalty.",
+    image:
+      "/images/digitalmarketing.jpg",
+    date: "April 12, 2024",
+    author: "Strategy Team",
+    readTime: "6 min read",
+  },
+  {
+    id: 2,
+    title: "Creating Content That Resonates",
+    description:
+      "Discover how meaningful storytelling and audience-focused content can increase engagement, trust, and long-term customer relationships.",
+    content:
+      "Creating impactful content is more than publishing articles or social media posts. Successful brands understand their audience's needs, pain points, and aspirations before crafting stories that educate, inspire, and entertain. High-quality visuals, consistent brand messaging, SEO optimization, and authentic storytelling all contribute to better engagement. Whether you're producing blogs, videos, or social media campaigns, valuable content builds credibility, encourages sharing, and transforms visitors into loyal customers.",
+    image:
+      "/images/contentcreation.png",
+    date: "March 28, 2024",
+    author: "Creative Team",
+    readTime: "5 min read",
+  },
+  {
+    id: 3,
+    title: "Event Management: Beyond Logistics",
+    description:
+      "Learn how strategic event planning creates memorable brand experiences that strengthen customer relationships and business growth.",
+    content:
+      "Modern event management goes far beyond coordinating schedules and venues. Every successful event is built around creating meaningful experiences that connect people with a brand. From corporate conferences and product launches to experiential marketing campaigns, every detail matters—from registration and stage design to audience engagement and post-event communication. Technology, live streaming, interactive sessions, and data-driven insights are helping businesses create memorable events that generate lasting impressions and measurable ROI.",
+    image:"/images/event.png",
+    date: "March 15, 2024",
+    author: "Events Hub",
+    readTime: "8 min read",
+  },
+  {
+    id: 4,
+    title: "Building a Personal Brand",
+    description:
+      "Build a powerful personal brand that establishes authority, attracts opportunities, and creates lasting professional influence.",
+    content:
+      "Your personal brand is one of your most valuable professional assets. Whether you're an entrepreneur, creator, freelancer, or executive, your online presence shapes how others perceive your expertise. Consistent messaging, authentic storytelling, thought leadership, and active engagement across platforms help establish credibility and trust. Sharing valuable insights, networking strategically, and maintaining a professional digital identity can open doors to partnerships, speaking engagements, and long-term career growth.",
+    image:
+      "/images/personalbranding.png",
+    date: "February 22, 2024",
+    author: "PR Expert",
+    readTime: "5 min read",
+  },
+  {
+    id: 5,
+    title: "Video Marketing Essentials",
+    description:
+      "Understand why video remains the most effective content format for engagement, brand awareness, and customer conversions.",
+    content:
+      "Video continues to dominate digital platforms because it communicates ideas quickly and creates emotional connections with audiences. From short-form reels and social media stories to educational YouTube content and brand documentaries, video marketing offers unmatched engagement. Businesses investing in professional production, compelling storytelling, optimized captions, and platform-specific strategies consistently outperform competitors. A strong video strategy also improves SEO, increases website retention, and drives higher conversion rates.",
+    image:
+      "/images/videomarketing.jpg",
+    date: "January 18, 2024",
+    author: "Production Team",
+    readTime: "7 min read",
+  },
+  {
+    id: 6,
+    title: "The Power of Influencer Marketing",
+    description:
+      "Explore how strategic influencer partnerships help brands reach targeted audiences, build trust, and increase conversions.",
+    content:
+      "Influencer marketing has become a cornerstone of modern digital strategy. Rather than focusing solely on celebrity endorsements, brands are increasingly partnering with micro and niche influencers who have highly engaged communities. Successful campaigns prioritize authenticity, creative freedom, and long-term relationships over one-time promotions. When influencers genuinely align with a brand's values, their recommendations feel natural, leading to stronger audience trust, increased brand awareness, and measurable business results.",
+    image:
+      "/images/inflencer.png",
+    date: "January 5, 2024",
+    author: "Social Team",
+    readTime: "6 min read",
+  },
 ];
 
 export default function BlogsPage() {
@@ -193,7 +211,7 @@ export default function BlogsPage() {
                                         </p>
                                     </div>
                                     <div className="pt-12 border-t border-border/50">
-                                        <Button className="rounded-full px-8 py-6 text-lg font-bold bg-red-600 hover:bg-red-700 text-white border-none" onClick={() => window.location.href = '#connect'}>
+                                        <Button className="rounded-full px-8 py-6 text-lg font-bold bg-red-600 hover:bg-red-700 text-white border-none" onClick={() => window.location.href = '/#connect'}>
                                             Discuss This Strategy
                                         </Button>
                                     </div>

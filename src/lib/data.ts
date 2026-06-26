@@ -3,7 +3,7 @@ export const services = [
         id: 1,
         title: "Creative Agency",
         description: "Scale your brand with data-driven marketing strategies designed to increase visibility, audience engagement, and sustainable conversions across all major platforms.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        image: "/images/creativeagency.jpg",
         featuresTitle: "Includes:",
         features: [
             "Social Media Marketing",
@@ -32,7 +32,7 @@ export const services = [
         id: 2,
         title: "Videography & Photography",
         description: "We capture high-quality visual stories that blend raw creativity with technical excellence to deliver impactful, platform-ready content for global brands.",
-        image: "https://images.unsplash.com/photo-1548502499-ef49e8cf98d4",
+        image: "/images/cameraDop.jpg",
         featuresTitle: "Ideal for:",
         features: [
             "Brands & Businesses",
